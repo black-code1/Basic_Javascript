@@ -136,6 +136,6 @@ lastName.length;
 lastNameLength = lastName.length;
 console.log(lastNameLength);
 
-/* Day #2 100DaysOfCode */
+/* Day #3 100DaysOfCode */
 
 //Basic Javascript:Use Bracket Notation to Find the
