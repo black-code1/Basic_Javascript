@@ -96,8 +96,46 @@ var c = 33;
 a /= 12;
 b /= 4;
 c /= 11;
-console.log(a);
 
 /* Day #2 100DaysOfCode */
 
 //Basic Javascript:Declare String Variables
+var myFirstName = "Mahamat";
+var myLastName = "Legrand";
+
+//Basic Javascript:Escaping Literal Quotes in Strings
+var myStr = 'I am a "double quoted" string inside "double quotes".';
+
+//Basic Javascript:Quoting Strings with Singles Quotes
+var myStr = '<a href="http://www.example.com" target =_blank>Link</a>';
+
+//Basic Javascript:Escape Sequences in Strings
+var myStr = "FirstLine\n\t\\SecondLine\nThirdLine";
+
+//Basic Javascript:Concatenating Strings with Plus Operator
+var myStr = "This is the start. " + "This is the end.";
+
+//Basic Javascript:Concatenating Strings with Plus Equals Operator
+var myStr = "This is the first sentence. ";
+myStr += "This is the second sentence.";
+
+//Basic Javascript:Constructing Strings with Variables
+var myName = "Mahamat";
+var myStr = "My name is " + myName + " and I am well!";
+
+//Basic Javascript:Appending Variables to Strings
+var someAdjective = "Awesome!";
+var myStr = "Learning to code is ";
+myStr += someAdjective;
+
+//Basic Javascript:Find the Length of a String
+var lastNameLength = 0;
+var lastName = "Lovelace";
+
+lastName.length;
+lastNameLength = lastName.length;
+console.log(lastNameLength);
+
+/* Day #2 100DaysOfCode */
+
+//Basic Javascript:Use Bracket Notation to Find the
