@@ -134,8 +134,133 @@ var lastName = "Lovelace";
 
 lastName.length;
 lastNameLength = lastName.length;
-console.log(lastNameLength);
 
 /* Day #3 100DaysOfCode */
 
-//Basic Javascript:Use Bracket Notation to Find the
+//Basic Javascript:Use Bracket Notation to Find the character in a string
+var firstLetterOfLastName = "";
+var lastName = "Lovelace";
+lastName[0];
+firstLetterOfLastName = lastName[0];
+
+//Basic Javascript:Understand String Immutability
+var myStr = "Jello World";
+myStr = "Hello World";
+
+//Basic Javascript:Use Bracket Notation to Find the Nth Character in a string
+var lastName = "Lovelace";
+var thirdLetterOfLastName = lastName[2];
+
+//Basic Javascript:Use Bracket Notation to Find the Last Character in a string
+var lastName = "Lovelace";
+var lastLetterOfLastName = lastName[lastName.length - 1];
+
+//Basic Javascript:Use Bracket Notation to Find the Nth-to-Last Character in a string
+var lastName = "Lovelace";
+var secondToLastOfLastName = lastName[lastNameLength - 2];
+
+//Basic Javascript:Word Blanks
+function wordBlanks(myNoun, myAdjective, myVerb, myAdverb) {
+  var result =
+    "In Australia, " +
+    myAdjective +
+    " " +
+    myNoun +
+    " usually " +
+    myVerb +
+    " " +
+    myAdverb;
+  // console.log(result);
+  return result;
+}
+wordBlanks("dog", "big", "ran", "quickly");
+
+//Basic Javascript:Store Multiple Values in One Variable using JavaScript Arrays
+var myArray = ["Mahamat", 21];
+
+//Basic Javascript:Nest one Array within Another Array - Multi-dimensional Array.
+var myArray = [["Mahamat", 21], ["Legrand", 21]];
+
+//Basic Javascript:Access Array Data with Indexes
+var myArray = [50, 60, 70];
+var myData = myArray[0];
+
+//Basic Javascript:Modify Array Data With Indexes
+var myArray = [18, 64, 99];
+myArray[0] = 45;
+
+/* Day #4 100DaysOfCode */
+
+//Basic Javascript:Access Multi-Dimensional Arrays With Indexes
+var myArray = [[1, 2, 3], [4, 5, 6], [7, 8, 9], [[10, 11, 12], 13, 14]];
+var myData = myArray[2][1];
+
+//Basic Javascript:Manipulate Arrays With push()
+var myArray = [["John", 23], ["cat", 2]];
+myArray.push(["dog", 3]);
+
+//Basic Javascript:Manipulate Arrays With pop()
+var myArray = [["John", 23], ["cat", 2]];
+var removedFromMyArray = myArray.pop();
+
+//Basic Javascript:Manipulate Arrays With shift()
+var myArray = [["John", 23], ["dog", 3]];
+var removedFromMyArray = myArray.shift();
+
+//Basic Javascript:Manipulate Arrays With unshift()
+var myArray = [["John", 23], ["dog", 3]];
+myArray.shift();
+myArray.unshift(["Paul", 35]);
+
+//Basic Javascript:Shopping List
+var myList = [
+  ["Javascript in depth", 2],
+  ["CSS in depth", 5],
+  ["Node js", 4],
+  ["Laravel framework", 5],
+  ["php for beginners", 15]
+];
+
+//Basic Javascript:Write Reusable Javascript with Functions
+function reusableFunction() {
+  console.log("Hi World");
+}
+//reusableFunction();
+
+//Basic Javascript:Passing Values to Functions with Arguments
+function functionWithArgs(a, b) {
+  console.log(a + b);
+}
+//functionWithArgs(10, 5);
+
+//Basic Javascript:Global Scope and Functions
+var myGlobal = 10;
+function fun1() {
+  oopsGlobal = 5;
+}
+
+//Basic Javascript:Local Scope and Functions
+function myLocalScope() {
+  var myVar = "use strict";
+  console.log(myVar);
+}
+//myLocalScope();
+//console.log(myVar);
+
+//Basic Javascript:Global vs. Local Scope in Functions
+var outerWear = "T-Shirt";
+function myOutfit() {
+  var outerWear = "sweater";
+  return outerWear;
+}
+myOutfit();
+
+//Basic Javascript:Return a Value from a Function with Return
+function timesFive(num) {
+  return num * 5;
+}
+//var answer = timesFive(5);
+
+/* Day #5 100DaysOfCode */
+
+//Basic Javascript:Understanding Undefined Value returned from a Function
