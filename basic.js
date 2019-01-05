@@ -264,3 +264,69 @@ function timesFive(num) {
 /* Day #5 100DaysOfCode */
 
 //Basic Javascript:Understanding Undefined Value returned from a Function
+var sum = 0;
+function addFive() {
+  sum += 5;
+}
+
+//Basic Javascript:Assignment with a Returned Value
+processed = 0;
+function processArg(num) {
+  return (num + 3) / 5;
+}
+processed = processArg(7);
+
+//Basic Javascript:Stand in Line
+function nextInLine(arr, item) {
+  var inArr = arr.push(item);
+  var outArr = arr.shift(item);
+  return outArr;
+}
+//var out = nextInLine([], 5);
+
+//Basic Javascript:Understanding Boolean Values
+function welcomeToBooleans() {
+  return true;
+}
+//var result = welcomeToBooleans();
+
+//Basic Javascript:Use Conditional Logic with If Statements
+function trueOrFalse(wasThatTrue) {
+  if (wasThatTrue) {
+    return "Yes, that was true";
+  }
+  return "No, that was false";
+}
+var res = trueOrFalse(false);
+
+//Basic Javascript:Comparison with the Equality Operator(type Coercion)
+function testEqual(val) {
+  if (val == 12) {
+    return "Equal";
+  }
+  return "Not Equal";
+}
+var res = testEqual(12);
+
+//Basic Javascript:Comparison with the Strict Equality Operator
+function testStrict(val) {
+  if (val === 7) {
+    return "Equal";
+  }
+  return "Not Equal";
+}
+var res = testStrict(7);
+
+//Basic Javascript:Practice comparing different values
+function compareEquality(a, b) {
+  if (a === b) {
+    return "Equal";
+  }
+  return "Not Equal";
+}
+var res = compareEquality(10, 10);
+console.log(res);
+
+/* Day #6 100DaysOfCode */
+
+//Basic Javascript:Comparison with the Inequality Operator
