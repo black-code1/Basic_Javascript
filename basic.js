@@ -325,8 +325,101 @@ function compareEquality(a, b) {
   return "Not Equal";
 }
 var res = compareEquality(10, 10);
-console.log(res);
+//console.log(res);
 
 /* Day #6 100DaysOfCode */
 
 //Basic Javascript:Comparison with the Inequality Operator
+function testNotEqual(val) {
+  if (val != 99) {
+    return "Not Equal";
+  }
+  return "Equal";
+}
+var res = testNotEqual(10);
+
+//Basic Javascript:Comparison with the Strict Inequality Operator
+function testStrictNotEqual(val) {
+  if (val !== 17) {
+    return "Not Equal";
+  }
+  return "Equal";
+}
+// res = testStrictNotEqual(10);
+
+//Basic Javascript:Comparison with the Greater Than Operator
+function testGreaterThan(val) {
+  if (val > 100) {
+    return "Over 100";
+  }
+  if (val > 10) {
+    return "Over 10";
+  }
+  return "10 or Under";
+}
+// res = testGreaterThan(10);
+
+//Basic Javascript:Comparison with the Greater Than Or Equal To Operator
+function testGreaterOrEqual(val) {
+  if (val >= 20) {
+    return "20 or Over";
+  }
+  if (val >= 10) {
+    return "10 or Over";
+  }
+  return "Less than 10";
+}
+
+//Basic Javascript:Comparison with the Less Than Operator
+function testLessThan(val) {
+  if (val < 25) {
+    return "Under 25";
+  }
+  if (val < 55) {
+    return "Under 55";
+  }
+  return "55 or Over";
+}
+
+//Basic Javascript:Comparison with the Less Than Or Equal To Operator
+function testLessThanOrEqual(val) {
+  if (val <= 12) {
+    return "Smaller Than or Equal to 12";
+  }
+  if (val <= 24) {
+    return "Smaller Than or Equal to 24";
+  }
+  return "More Than 24";
+}
+
+//Basic Javascript:Comparison with the Logical And Operator
+function testLogicalAnd(val) {
+  if (val <= 50 && val >= 25) {
+    return "Yes";
+  }
+  return "No";
+}
+
+//Basic Javascript:Comparison with the Logical Or Operator
+function testLogicalOr(val) {
+  if (val > 20 || val < 10) {
+    return "Outside";
+  }
+  return "Inside";
+}
+
+//Basic Javascript:Introducing Else Statements
+function testElse(val) {
+  var result = "";
+  if (val > 5) {
+    result = "Bigger than";
+  } else {
+    result = "5 or Smaller";
+  }
+  return result;
+}
+
+/* Day #7 100DaysOfCode & 301DaysOfCode */
+
+//Basic Javascript:Introducing Else If Statements
+console.log(testElse(5));
