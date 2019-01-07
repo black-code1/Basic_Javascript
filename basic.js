@@ -422,4 +422,85 @@ function testElse(val) {
 /* Day #7 100DaysOfCode & 301DaysOfCode */
 
 //Basic Javascript:Introducing Else If Statements
-console.log(testElse(5));
+function testElseIf(val) {
+  if (val > 10) {
+    return "Greater than 10";
+  } else if (val < 5) {
+    return "Smaller thna 5";
+  } else {
+    return "Between 5 and 10";
+  }
+}
+
+//Basic Javascript:Logical Order in If Else Statements
+function orderMyLogical(val) {
+  if (val < 5) {
+    return "Less than 5";
+  } else if (val < 10) {
+    return "Less than 10";
+  } else {
+    return "Greater than or equal to 10";
+  }
+}
+
+//Basic Javascript:Chaining If Else Statements
+function testSize(num) {
+  if (num < 5) {
+    return "Tiny";
+  } else if (num < 10) {
+    return "Small";
+  } else if (num < 15) {
+    return "Medium";
+  } else if (num < 20) {
+    return "Large";
+  } else if (num >= 20) {
+    return "Huge";
+  } else {
+    return "Change Me";
+  }
+}
+
+//Basic Javascript:Golf Code
+var names = [
+  "Hole-in-one!",
+  "Eagle",
+  "Birdie",
+  "Par",
+  "Bogey",
+  "Double Bogey",
+  "Go Home!"
+];
+function golfScore(par, strokes) {
+  if (strokes == 1) {
+    return names[0];
+  } else if (strokes <= par - 2) {
+    return names[1];
+  } else if (strokes == par - 1) {
+    return names[2];
+  } else if (strokes == par) {
+    return names[3];
+  } else if (strokes == par + 1) {
+    return names[4];
+  } else if (strokes == par + 2) {
+    return names[5];
+  } else if (strokes >= par + 3) {
+    return names[6];
+  } else {
+    return "Change Me";
+  }
+}
+// console.log(golfScore(4, 1));
+// console.log(golfScore(4, 2));
+// console.log(golfScore(5, 2));
+// console.log(golfScore(4, 3));
+// console.log(golfScore(4, 4));
+// console.log(golfScore(1, 1));
+// console.log(golfScore(5, 5));
+// console.log(golfScore(4, 5));
+// console.log(golfScore(4, 6));
+// console.log(golfScore(4, 7));
+// console.log(golfScore(5, 9));
+
+/* Day #8 100DaysOfCode & 301DaysOfCode */
+
+//Basic Javascript:Selecting from Many Options with Switch Statements
