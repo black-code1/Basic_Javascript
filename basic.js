@@ -504,3 +504,125 @@ function golfScore(par, strokes) {
 /* Day #8 100DaysOfCode & 301DaysOfCode */
 
 //Basic Javascript:Selecting from Many Options with Switch Statements
+function caseInSwitch(val) {
+  var answer = "";
+  switch (val) {
+    case 1:
+      answer = "alpha";
+      break;
+    case 2:
+      answer = "beta";
+      break;
+    case 3:
+      answer = "gamma";
+      break;
+    case 4:
+      answer = "delta";
+      break;
+  }
+  return answer;
+}
+
+//Basic Javascript:Adding a Default Option in Switch Statements
+function switchOfStuff(val) {
+  var answer = "";
+  switch (val) {
+    case "a":
+      answer = "apple";
+      break;
+    case "b":
+      answer = "bird";
+      break;
+    case "c":
+      answer = "cat";
+      break;
+    default:
+      answer = "stuff";
+  }
+  return answer;
+}
+
+//Basic Javascript:Multiple Identical Options in Switch Statements
+function sequentialSizes(val) {
+  var answer = "";
+  switch (val) {
+    case 1:
+    case 2:
+    case 3:
+      answer = "Low";
+      break;
+    case 4:
+    case 5:
+    case 6:
+      answer = "Mid";
+      break;
+    case 7:
+    case 8:
+    case 9:
+      answer = "High";
+      break;
+  }
+  return answer;
+}
+
+//Basic Javascript:Replacing If Else Chains with Switch
+function chainToSwitch(val) {
+  var answer = "";
+  switch (val) {
+    case "bob":
+      answer = "Marley";
+      break;
+    case 42:
+      answer = "The Answer";
+      break;
+    case 1:
+      answer = "There is no #1";
+      break;
+    case 99:
+      answer = "Missed me by this much!";
+      break;
+    case 7:
+      answer = "Ate Nine";
+  }
+  return answer;
+}
+
+//Basic Javascript:Returning Boolean Values from Functions
+function isLess(a, b) {
+  return a < b;
+}
+//Basic Javascript:Return Early Pattern for Functions
+function abTest(a, b) {
+  if (a < 0 || b < 0) {
+    return;
+  }
+  return Math.round(Math.pow(Math.sqrt(a) + Math.sqrt(b), 2));
+}
+
+/* Day #9 100DaysOfCode & 301DaysOfCode */
+
+//Basic Javascript:Counting Cards
+//Not solve
+var count = 0;
+function cc(card) {
+  if (card == 2 || card == 3 || card == 4 || card == 5 || card == 6) {
+    count++;
+    return count + " Bet";
+  } else if (card == 7 || card == 8 || card == 9) {
+    return count + " Bet";
+  } else if (
+    card == 10 ||
+    card == "J" ||
+    card == "Q" ||
+    card == "K" ||
+    card == "A"
+  ) {
+    count--;
+    return count + " Hold";
+  }
+}
+console.log(cc(2));
+console.log(cc("J"));
+console.log(cc(9));
+console.log(cc(2));
+console.log(cc(7));
