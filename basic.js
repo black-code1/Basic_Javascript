@@ -599,30 +599,150 @@ function abTest(a, b) {
   return Math.round(Math.pow(Math.sqrt(a) + Math.sqrt(b), 2));
 }
 
-/* Day #9 100DaysOfCode & 301DaysOfCode */
+/* Day #9 100DaysOfCode & 301DaysOfCode  still unsolved Counting Cards*/
 
 //Basic Javascript:Counting Cards
 //Not solve
+// var count = 0;
+// function cc(card) {
+//   if (card == 2 || card == 3 || card == 4 || card == 5 || card == 6) {
+//     count++;
+//     return count + " Bet";
+//   } else if (card == 7 || card == 8 || card == 9) {
+//     return count + " Bet";
+//   } else if (
+//     card == 10 ||
+//     card == "J" ||
+//     card == "Q" ||
+//     card == "K" ||
+//     card == "A"
+//   ) {
+//     count--;
+//     return count + " Hold";
+//   }
+// }
+
+/* Day #10 100DaysOfCode & 301DaysOfCode*/
+
+//Basic Javascript:Counting Cards :) Finaly solved it
 var count = 0;
+var answer = "";
 function cc(card) {
-  if (card == 2 || card == 3 || card == 4 || card == 5 || card == 6) {
-    count++;
-    return count + " Bet";
-  } else if (card == 7 || card == 8 || card == 9) {
-    return count + " Bet";
-  } else if (
-    card == 10 ||
-    card == "J" ||
-    card == "Q" ||
-    card == "K" ||
-    card == "A"
-  ) {
-    count--;
-    return count + " Hold";
+  switch (card) {
+    case 2:
+      count++;
+      answer = count + " Bet";
+      break;
+    case 3:
+      count++;
+      answer = count + " Bet";
+      break;
+    case 4:
+      count++;
+      answer = count + " Bet";
+      break;
+    case 5:
+      count++;
+      answer = count + " Bet";
+      break;
+    case 6:
+      count++;
+      answer = count + " Bet";
+      break;
+    case 7:
+      if (count <= 0) {
+        answer = count + " Hold";
+      } else {
+        answer = count + " Bet";
+      }
+
+      break;
+    case 8:
+      if (count <= 0) {
+        answer = count + " Hold";
+      } else {
+        answer = count + " Bet";
+      }
+      break;
+    case 9:
+      if (count <= 0) {
+        answer = count + " Hold";
+      } else {
+        answer = count + " Bet";
+      }
+      break;
+    case 10:
+      count--;
+      if (count > 0) {
+        answer = count + " Bet";
+      } else {
+        count + " Hold";
+      }
+
+      break;
+    case "J":
+      count--;
+      answer = count + " Hold";
+      break;
+    case "Q":
+      count--;
+      answer = count + " Hold";
+      break;
+    case "K":
+      count--;
+      answer = count + " Hold";
+      break;
+    case "A":
+      count--;
+      answer = count + " Hold";
+      break;
   }
+  return answer;
 }
-console.log(cc(2));
-console.log(cc("J"));
-console.log(cc(9));
-console.log(cc(2));
-console.log(cc(7));
+// console.log(cc(2));
+// console.log(cc(2));
+// console.log(cc(10));
+// console.log(cc(2));
+// console.log(cc(7));
+
+//Basic Javascript:Build JavaScript Objects
+var myDog = {
+  name: "Luffy",
+  legs: 4,
+  tails: 1,
+  friends: ["man", "baby-dog"]
+};
+
+//Basic Javascript:Accessing Object Properties with Dot Notation
+var testObj = {
+  hat: "ballcap",
+  shirt: "jersey",
+  shoes: "cleats"
+};
+var hatValue = testObj.hat;
+var shirtValue = testObj.shirt;
+// console.log(hatValue);
+
+//Basic Javascript:Accessing Object Properties with Bracket Notation
+var testObj = {
+  "an entree": "hamburger",
+  "my side": "veggies",
+  "the drink": "water"
+};
+var entreeValue = testObj["an entree"];
+var drinkValue = testObj["the drink"];
+
+//Basic Javascript:Accessing Object Properties with Variables
+var testObj = {
+  12: "Namath",
+  16: "Montana",
+  19: "Unitas"
+};
+
+var playerNumber = 16;
+var player = testObj[playerNumber];
+console.log(player);
+
+/* Day #11 100DaysOfCode & 301DaysOfCode*/
+
+//Basic Javascript:Updating Object Properties
