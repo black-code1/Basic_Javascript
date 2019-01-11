@@ -741,8 +741,139 @@ var testObj = {
 
 var playerNumber = 16;
 var player = testObj[playerNumber];
-console.log(player);
+// console.log(player);
 
 /* Day #11 100DaysOfCode & 301DaysOfCode*/
 
 //Basic Javascript:Updating Object Properties
+var myDog = {
+  name: "Coder",
+  legs: 4,
+  tails: 1,
+  friends: ["freeCodeCamp Campers"]
+};
+
+myDog.name = "Happy Coder";
+
+//Basic Javascript:Add New Properties to a JavaScript Object
+var myDog = {
+  name: "Happy Coder",
+  legs: 4,
+  tails: 1,
+  friends: ["freeCodeCamp Campers"]
+};
+myDog.bark = "woof";
+
+//Basic Javascript:Delete Properties from a JavaScript Object
+var myDog = {
+  name: "Happy Coder",
+  legs: 4,
+  tails: 1,
+  friends: ["freeCodeCamp Campers"],
+  bark: "woof"
+};
+delete myDog.tails;
+
+//Basic Javascript:Using Objects for Lookups
+function phoneticLookup(val) {
+  var result = "";
+  var lookup = {
+    alpha: "Adams",
+    bravo: "Boston",
+    charlie: "Chicago",
+    delta: "Denver",
+    echo: "Easy",
+    foxtrot: "Frank"
+  };
+  result = lookup[val];
+  return result;
+}
+
+//Basic Javascript:Testing Objects for Properties
+var myObj = {
+  gift: "pony",
+  pet: "kitten",
+  bed: "sleigh"
+};
+function checkObj(checkProp) {
+  if (myObj.hasOwnProperty(checkProp)) {
+    return myObj[checkProp];
+  }
+  return "Not Found";
+}
+// console.log(checkObj("gift"));
+
+//Basic Javascript:Manipulating Complex Objects
+var myMusic = [
+  {
+    artist: "Billy Joel",
+    title: "Piano Man",
+    release_year: 1973,
+    formats: ["CD", "8T", "LP"],
+    gold: true
+  },
+  {
+    artist: "Colt Play",
+    title: "Numb",
+    release_year: 2007,
+    formats: ["DVD", "9T", "LP"]
+  }
+];
+
+//Basic Javascript:Accessing Nested Objects
+var myStorage = {
+  car: {
+    inside: {
+      "glove box": "maps",
+      "passsenger seat": "crumbs"
+    },
+    outside: {
+      trunk: "jack"
+    }
+  }
+};
+var gloveBoxContents = myStorage.car.inside["glove box"];
+
+//Basic Javascript:Accessing Nested Arrays
+var myPlants = [
+  {
+    type: "flowers",
+    list: ["rose", "tulip", "dandelion"]
+  },
+  {
+    type: "trees",
+    list: ["fir", "pine", "birch"]
+  }
+];
+var secondTree = myPlants[1].list[1];
+
+/* Day #12 100DaysOfCode & 301DaysOfCode for the next day*/
+
+//Basic Javascript:Record Collection
+var collection = {
+  "2548": {
+    album: "Slippery When Wet",
+    Artist: "Bon Jovi",
+    tracks: ["Let It Rock", "You Give Love a Bad Name"]
+  },
+  "2468": {
+    album: "1999",
+    Artist: "Prince",
+    tracks: ["1999", "Little Red Corvette"]
+  },
+  "1245": {
+    Artist: "Robert Palmer",
+    tracks: []
+  },
+  "2548": {
+    album: "ABBA Gold"
+  }
+};
+// Keep a copy of the collection for tests
+var collectionCopy = JSON.parse(JSON.stringify(collection));
+
+function updateRecords(id, prop, value) {
+  if (collection.hasOwnProperty) return collection;
+}
+updateRecords(5439, "artist", "ABBA");
+console.log(secondTree);
