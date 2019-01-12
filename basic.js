@@ -865,7 +865,7 @@ var collection = {
     Artist: "Robert Palmer",
     tracks: []
   },
-  "2548": {
+  "5439": {
     album: "ABBA Gold"
   }
 };
@@ -873,7 +873,27 @@ var collection = {
 var collectionCopy = JSON.parse(JSON.stringify(collection));
 
 function updateRecords(id, prop, value) {
-  if (collection.hasOwnProperty) return collection;
+  switch (id) {
+    case id:
+      if (prop !== "tracks" && value !== "") {
+        collection[id][prop] = value;
+      } else if (
+        prop === "tracks" &&
+        collection[id].hasOwnProperty("tracks") == false
+      ) {
+        collection[id][prop] = [];
+        collection[id][prop].push(value);
+      } else if (prop === "tracks" && value !== "") {
+        collection[id][prop].push(value);
+      } else if (value === "") {
+        delete collection[id][prop];
+      }
+  }
+  return collection;
 }
-updateRecords(5439, "artist", "ABBA");
-console.log(secondTree);
+// console.log(updateRecords(2548, "tracks", ""));
+// console.log(secondTree);
+
+/* Day #13 100DaysOfCode & 301DaysOfCode*/
+
+//Basic Javascript:Iterate with JavaScript While Loops
