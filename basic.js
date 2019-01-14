@@ -954,5 +954,87 @@ do {
 /* Day #14 100DaysOfCode & 301DaysOfCode*/
 
 //Basic Javascript:Profile Lookup
+var contacts = [
+  {
+    firstName: "Akira",
+    lastName: "Laine",
+    number: "0543236543",
+    likes: ["Pizza", "Coding", "Brownie Points"]
+  },
+  {
+    firstName: "Harry",
+    lastName: "Potter",
+    number: "0994372684",
+    likes: ["Hogwarts", "Magic", "Hagrid"]
+  },
+  {
+    firstName: "Sherlock",
+    lastName: "Holmes",
+    number: "0487345643",
+    likes: ["Intriguing Cases", "Violin"]
+  },
+  {
+    firstName: "Kristian",
+    lastName: "Vos",
+    number: "unknown",
+    likes: ["JavaScript", "Gaming", "Foxes"]
+  }
+];
 
-// console.log(myArray);
+function lookUpProfile(name, prop) {
+  for (var i = 0; i < contacts.length; i++) {
+    if (contacts[i].firstName === name) {
+      if (contacts[i].hasOwnProperty(prop)) {
+        return contacts[i][prop];
+      } else {
+        return "No such property";
+      }
+    }
+  }
+  return "No such property";
+}
+// console.log(lookUpProfile("Kristian", "lastName"));
+
+//Basic Javascript:Generate Random Fractions with JavaScript
+function randomFraction() {
+  return Math.random();
+}
+
+//Basic Javascript:Generate Random Whole Numbers with JavaScript
+var randomNUMBERbetween0and19 = Math.floor(Math.random() * 20);
+function randomWholeNum() {
+  return Math.floor(Math.random() * 10);
+}
+
+//Basic Javascript:Generate Random Whole Numbers within a Range
+function randomRange(myMin, myMax) {
+  return Math.floor(Math.random() * (myMax - myMin + 1) + myMin);
+}
+var myRandom = randomRange(5, 15);
+
+//Basic Javascript:Use the parseInt Function
+function convertToInteger(str) {
+  var output = parseInt(str);
+  return output;
+}
+// console.log(convertToInteger("56"));
+
+//Basic Javascript:Use the parseInt Function with a Radix
+function convertToInteger1(str1) {
+  return parseInt(str1, 2);
+}
+
+//Basic Javascript:Use the Conditional(Ternary) Operator
+function checkEqual(a, b) {
+  return a === b ? true : false;
+}
+// console.log(checkEqual(1,2));
+
+//Basic Javascript:Use Multiple Conditional (Ternary) OPerators
+function checkSign(num) {
+  return num > 0 ? "positive" : num < 0 ? "negative" : "zero";
+}
+console.log(checkSign(10));
+console.log("END OF Basic Javascript ON FREECODECAMP :)")
+//Basic Javascript:console.log("END OF Basic Javascript :)")
+/* End OF THIS REPOSITORY */
